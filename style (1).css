@@ -1,0 +1,316 @@
+/* RESET */
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+  font-family: "Playpen Sans", cursive;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* BACKGROUND IMAGE */
+.space-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* NAVBAR */
+.navbar-container {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(21, 13, 39, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.ul-navbar-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.li-navbar-container,
+.li-navbar-brand {
+  margin: 0 15px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
+
+.li-navbar-brand {
+  font-family: "Modak", system-ui;
+  font-size: 35px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.li-navbar-brand::before {
+  content: "SPARK";
+  position: absolute;
+  top: 3px; /* geser sedikit */
+  left: 3px;
+  z-index: -1;
+  background: linear-gradient(to bottom right,
+    #840000,
+    #ae0808,
+    #d90e0e,
+    #ff1111
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Modak", system-ui;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.li-navbar-container {
+  font-family:"DynaPuff", system-ui;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.li-navbar-container a {
+  color: white;
+  transition: color 0.3s ease;
+  font-family:"DynaPuff", system-ui;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-shadow: 2px 1px 0 #e22b2b;
+}
+
+.li-navbar-container a:hover {
+  color: #ffcc00;
+}
+
+/* KONTEN UTAMA */
+.content-wrapper {
+  position: relative;
+  z-index: 5;
+  padding-top: 900px;
+}
+
+
+/* JUDUL */
+.judul-container {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: "Faculty Glyphic", sans-serif;
+}
+
+.judul-container h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-family: "Modak", system-ui;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.judul-container h1::before {
+ content: "SPARK";
+  position: absolute;
+  top: 3px; /* geser sedikit */
+  z-index: -1;
+  background: linear-gradient(to bottom right,
+    #840000,
+    #ae0808,
+    #d90e0e,
+    #ff1111);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Modak", system-ui;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.judul-container p {
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+
+/* INTRODUCE */
+.introduce-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.introduce-box {
+  background-color: #2a2241;
+  width: 230px;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  color:white;
+}
+
+.introduce-box:hover {
+  transform: translateY(-5px);
+}
+
+.introduce-box h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.introduce-box img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.introduce-box .tugas {
+  font-family:"Faculty Glyphic", sans-serif;
+  color:#ffffff;
+  text-shadow: 2px 1px 0 #5f310c;
+}
+
+.introduce-box .nama {
+  font-weight: bold;
+  margin: 10px 0 5px;
+  font-family:"DynaPuff", system-ui;
+  color: #ffee8e;
+}
+
+.introduce-box .desc {
+  font-size: 14px;
+  line-height: 1.4;
+  font-family:"Faculty Glyphic", sans-serif;
+}
+
+.planet-carousel-container {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* inilah yang bikin teks <p> ketengah secara vertikal */
+  height: 100%;
+}
+
+.judul-carousel {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.swiper {
+  width: 90%;
+  padding: 20px 0;
+  margin: auto;
+}
+
+.swiper-slide {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 20px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+  backdrop-filter: blur(5px);
+  font-family: 'DynaPuff', cursive;
+}
+
+.planet-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #2A2241; /* warna yang kamu minta */
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  justify-content: center;
+  height: 100%;
+  min-height: 200px;
+}
+
+.planet-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.planet-slide h3 {
+  font-family: "DynaPuff", system-ui;
+  font-size: 20px;
+  color: #ffee8e;; /* contoh warna teks judul, bisa kamu ubah */
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
+.planet-slide p {
+  max-width: 300px;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff; /* contoh warna teks isi, bisa juga kamu ganti */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+   margin-top: auto;
+  margin-bottom: auto;
+}
+
+.planet-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px; /* ini juga bisa bantu bagian no 1: biar turun ke bawah */
+}
+
+.planet-slide:hover {
+  transform: translateY(-10px);
+}
+
